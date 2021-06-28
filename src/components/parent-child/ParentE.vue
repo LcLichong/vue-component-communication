@@ -1,31 +1,18 @@
 <template>
   <div class="container">
-    <h2>父子组件通信方式4:provide和inject</h2>
-    <Child></Child>
+    <h2>父子组件通信方式5:$attrs和$listeners</h2>
+    <Child :array="array" @getIndex="getIndex"></Child>
     <button @click="add">添加一条数据，看看是否是响应式</button>
   </div>
 </template>
 
 <script>
-import Child from './ChildD.vue'
-import Vue from 'vue'
+import Child from './ChildE.vue'
 
 export default {
   name: 'Parent',
   components: {
     Child
-  },
-  created () {
-  },
-  provide () {
-    let parent = Vue.observable({
-      array: this.array,
-      getIndex: this.getIndex,
-      vm: this
-    })
-    return {
-      parent
-    }
   },
   data: function () {
     return {

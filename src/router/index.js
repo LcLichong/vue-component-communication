@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 const ParentChildViewA = () =>
     import ('../views/parent-child/ViewA.vue')
 const ParentChildViewB = () =>
@@ -8,6 +9,12 @@ const ParentChildViewC = () =>
     import ('../views/parent-child/ViewC.vue')
 const ParentChildViewD = () =>
     import ('../views/parent-child/ViewD.vue')
+const ParentChildViewE = () =>
+    import ('../views/parent-child/ViewE.vue')
+const ParentChildViewF = () =>
+    import ('../views/brother/ViewA.vue')
+const ParentChildViewG = () =>
+    import ('../views/brother/ViewB.vue')
 
 Vue.use(VueRouter)
 
@@ -35,6 +42,21 @@ const routes = [{
         path: '/ParentChildViewD',
         name: 'ParentChildViewD',
         component: ParentChildViewD
+    },
+    {
+        path: '/ParentChildViewE',
+        name: 'ParentChildViewE',
+        component: ParentChildViewE
+    },
+    {
+        path: '/ParentChildViewF',
+        name: 'ParentChildViewF',
+        component: ParentChildViewF
+    },
+    {
+        path: '/ParentChildViewG',
+        name: 'ParentChildViewG',
+        component: ParentChildViewG
     }
 ]
 

@@ -5,6 +5,11 @@
       <router-link to="/ParentChildViewB">父子组件通信2</router-link>
       <router-link to="/ParentChildViewC">父子组件通信3</router-link>
       <router-link to="/ParentChildViewD">父子组件通信4</router-link>
+      <router-link to="/ParentChildViewE">父子组件通信5</router-link>
+    </div>
+    <div id="nav">
+      <router-link to="/ParentChildViewF">兄弟组件通信1</router-link>
+      <router-link to="/ParentChildViewG">兄弟组件通信2</router-link>
     </div>
     <router-view />
   </div>
