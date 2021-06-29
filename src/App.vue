@@ -8,8 +8,13 @@
       <router-link to="/ParentChildViewE">父子组件通信5</router-link>
     </div>
     <div id="nav">
-      <router-link to="/ParentChildViewF">兄弟组件通信1</router-link>
-      <router-link to="/ParentChildViewG">兄弟组件通信2</router-link>
+      <router-link to="/BrotherViewA">兄弟组件通信1</router-link>
+      <router-link to="/BrotherViewB">兄弟组件通信2</router-link>
+    </div>
+    <div id="nav">
+      <router-link to="/IgViewA">隔代组件通信1</router-link>
+      <router-link to="/IgViewB">隔代组件通信2</router-link>
+      <router-link to="/IgViewC">隔代组件通信3</router-link>
     </div>
     <router-view />
   </div>
@@ -25,7 +30,7 @@
 }
 
 #nav {
-  padding: 30px;
+  padding: 20px;
 }
 
 #nav a {

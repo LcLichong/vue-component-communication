@@ -2,6 +2,8 @@ module.exports = {
     productionSourceMap: process.env.NODE_ENV !== 'production',
     publicPath: './',
     devServer: {
+        host: 'localhost',
+        port: '3000',
         open: true,
         hotOnly: true
     },

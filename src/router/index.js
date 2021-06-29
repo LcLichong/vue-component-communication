@@ -11,10 +11,16 @@ const ParentChildViewD = () =>
     import ('../views/parent-child/ViewD.vue')
 const ParentChildViewE = () =>
     import ('../views/parent-child/ViewE.vue')
-const ParentChildViewF = () =>
+const BrotherViewA = () =>
     import ('../views/brother/ViewA.vue')
-const ParentChildViewG = () =>
+const BrotherViewB = () =>
     import ('../views/brother/ViewB.vue')
+const IgViewA = () =>
+    import ('../views/inter-generational/ViewA.vue')
+const IgViewB = () =>
+    import ('../views/inter-generational/ViewB.vue')
+const IgViewC = () =>
+    import ('../views/inter-generational/ViewC.vue')
 
 Vue.use(VueRouter)
 
@@ -49,14 +55,29 @@ const routes = [{
         component: ParentChildViewE
     },
     {
-        path: '/ParentChildViewF',
-        name: 'ParentChildViewF',
-        component: ParentChildViewF
+        path: '/BrotherViewA',
+        name: 'BrotherViewA',
+        component: BrotherViewA
     },
     {
-        path: '/ParentChildViewG',
-        name: 'ParentChildViewG',
-        component: ParentChildViewG
+        path: '/BrotherViewB',
+        name: 'BrotherViewB',
+        component: BrotherViewB
+    },
+    {
+        path: '/IgViewA',
+        name: 'IgViewA',
+        component: IgViewA
+    },
+    {
+        path: '/IgViewB',
+        name: 'IgViewB',
+        component: IgViewB
+    },
+    {
+        path: '/IgViewC',
+        name: 'IgViewC',
+        component: IgViewC
     }
 ]
 
