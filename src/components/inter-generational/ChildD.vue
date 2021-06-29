@@ -14,8 +14,8 @@
 export default {
   name: 'ChildD',
   created: function () {
-    console.log('d-attrs', this.$attrs)
-    console.log('d-listeners', this.$listeners)
+    console.log(this.$attrs)
+    console.log(this.$listeners)
   },
   methods: {
     passIndex (index) {

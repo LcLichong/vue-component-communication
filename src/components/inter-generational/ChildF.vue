@@ -16,9 +16,12 @@ import EventBus from '../event-bus/index'
 export default {
   name: 'ChildF',
   mounted: function () {
-    EventBus.$on('initArray', data => {
+    EventBus.$on('initIgArray2', data => {
       this.array = data.array
     })
+  },
+  destroyed () {
+    EventBus.$off('igPassIndex')
   },
   data: function () {
     return {
@@ -27,7 +30,7 @@ export default {
   },
   methods: {
     passIndex (index) {
-      EventBus.$emit('passIndex', {
+      EventBus.$emit('igPassIndex', {
         name: this.$options.name,
         index
       })

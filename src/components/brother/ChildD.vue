@@ -7,15 +7,18 @@
 </template>
 
 <script>
-import EventBug from '../event-bus/index'
+import EventBus from '../event-bus/index'
 
 export default {
   name: 'ChildD',
   props: {},
   mounted () {
-    EventBug.$on('receiveAMsg', data => {
+    EventBus.$on('receiveAMsg', data => {
       this.AMessage = data.AMsg
     })
+  },
+  destroyed () {
+    EventBus.$off('receiveBMsg')
   },
   data: function () {
     return {
@@ -25,7 +28,7 @@ export default {
   },
   methods: {
     transform () {
-      EventBug.$emit('receiveBMsg', {
+      EventBus.$emit('receiveBMsg', {
         BMsg: this.BMessage
       })
     }

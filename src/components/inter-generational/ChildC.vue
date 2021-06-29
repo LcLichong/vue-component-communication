@@ -14,8 +14,7 @@ export default {
     ChildD
   },
   created: function () {
-    console.log('c-attrs', this.$attrs)
-    console.log('c-listeners', this.$listeners)
+
   },
   methods: {
 

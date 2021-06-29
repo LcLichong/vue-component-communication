@@ -16,12 +16,15 @@ export default {
     ChildE
   },
   mounted () {
-    EventBus.$emit('initArray', {
+    EventBus.$emit('initIgArray2', {
       array: this.array
     })
-    EventBus.$on('passIndex', data => {
+    EventBus.$on('igPassIndex', data => {
       this.getIndex(data)
     })
+  },
+  destroyed () {
+    EventBus.$off('initIgArray2')
   },
   data: function () {
     return {
